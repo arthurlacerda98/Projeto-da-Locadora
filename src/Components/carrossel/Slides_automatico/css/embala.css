@@ -1,0 +1,112 @@
+.embla-automatico {
+  --slide-spacing: 1rem;
+  --slide-size: 250px;
+  --slide-height: 17.5rem;
+  padding: 3rem 1.6rem 1.6rem 1.6rem;
+  margin-bottom: 4rem;
+}
+.embla__viewport-automatico {
+  overflow: hidden;
+}
+.embla__container-automatico {
+  backface-visibility: hidden;
+  display: flex;
+  gap: 35px;
+  touch-action: pan-y;
+  flex-direction: column;
+  height: calc(var(--slide-spacing) + var(--slide-height));
+  margin-left: calc(var(--slide-spacing) * -1);
+  border-radius: 20px;
+  align-items: center;
+}
+.embla__slide-automatico {
+  flex: 0 0 var(--slide-size);
+  width: 930px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 0 20px -9px gray;
+  display: flex;
+  align-items: center;
+}
+.embla__slide__img-automatico {
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+.embla__slide__number-automatico {
+  width: 4.6rem;
+  height: 4.6rem;
+  z-index: 1;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  border-radius: 50%;
+  background-color: rgba(var(--background-site-rgb-value), 0.85);
+  line-height: 4.6rem;
+  font-weight: 900;
+  text-align: center;
+  pointer-events: none;
+}
+.embla__slide__number-automatico > span {
+  color: var(--brand-primary);
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.conteudo__automatico {
+  padding: 3rem 2rem 2rem;
+}
+
+.conteudo__automatico__titulo {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  font-weight: 510;
+}
+
+.conteudo__automatico__texto {
+  font-size: 16.5px;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .embla__slide-automatico {
+    display: block;
+    height: var(--slide-height);
+    width: 90%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 430px) {
+  .embla__slide-automatico {
+    display: block;
+    height: var(--slide-height);
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .conteudo__automatico {
+    height: 20rem;
+  }
+
+  .embla-automatico {
+    --slide-height: 26rem;
+
+  }
+}
